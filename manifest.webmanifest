@@ -6,6 +6,7 @@
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "prefer_related_applications": false,
   "orientation": "portrait-primary",
   "background_color": "#EEF2F7",
   "theme_color": "#12264A",
@@ -15,3 +16,4 @@
     { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }
+

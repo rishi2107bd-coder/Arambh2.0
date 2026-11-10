@@ -4,7 +4,7 @@ This folder contains the mobile-first, installable PWA version of the supplied A
 
 ## Deploy to GitHub Pages
 
-Upload the **contents of this folder** to the same published directory in the `Arambh2.0` repository. Keep `index.html`, `admin.html`, `config.js`, `schema.sql`, `manifest.webmanifest`, `service-worker.js`, and the `icons` folder together. Do not place the files in a nested `Arambh2-mobile` directory unless that directory is intentionally configured as the Pages site root.
+Upload the **contents of this folder** to the same published directory in the `Arambh2.0` repository. Keep `index.html`, `admin.html`, `theme.css`, `config.js`, `schema.sql`, `manifest.webmanifest`, `service-worker.js`, and the `icons` folder together. Do not place the files in a nested `Arambh2-mobile` directory unless that directory is intentionally configured as the Pages site root.
 
 In the repository, open **Settings → Pages** and select **Deploy from a branch**. Choose the branch containing these files and its published folder (usually `/(root)`), then save. If the repository already publishes Pages from a custom folder or GitHub Actions workflow, keep that source and put the files in its published directory so existing deployment behavior remains intact.
 
@@ -26,3 +26,4 @@ The service worker caches the app shell for faster repeat loading and a basic of
 The shop header is condensed for narrow screens, category chips scroll horizontally, product cards and dialogs fit phone widths, controls have larger tap targets, and dialogs respect device safe areas. Desktop layout remains fluid.
 
 The service worker limits caching and cache cleanup to this app's path and cache namespace, which is important because GitHub Pages project sites share a domain.
+

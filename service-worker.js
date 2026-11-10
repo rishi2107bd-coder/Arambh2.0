@@ -2,7 +2,7 @@ const SCOPE_PATH = new URL("./", self.registration.scope).pathname;
 const SCOPE_KEY = SCOPE_PATH.replace(/^\/$/, "root").replace(/[^A-Za-z0-9_-]/g, "-");
 const CACHE_PREFIX = `arambh-mobile-${SCOPE_KEY}-`;
 const CACHE = `${CACHE_PREFIX}v1`;
-const APP_FILES = ["./", "./index.html", "./admin.html", "./config.js", "./manifest.webmanifest", "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png"];
+const APP_FILES = ["./", "./index.html", "./admin.html", "./theme.css", "./config.js", "./manifest.webmanifest", "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_FILES)).then(() => self.skipWaiting()));
 });
@@ -18,3 +18,4 @@ self.addEventListener("fetch", event => {
     return response;
   }).catch(() => caches.open(CACHE).then(cache => cache.match(request).then(cached => cached || (request.mode === "navigate" ? cache.match(new URL("index.html", self.registration.scope).href) : Response.error())))));
 });
+
